@@ -28,14 +28,15 @@ class Neuron(object):
             self.inputs = inputs
             for i in range(self.size):
                 neu_sum += self.weights[i] * self.inputs[i]
-        return neu_sum
+        return neu_sum + self.bias
 
     def sigmoid(self, inputs):
         """
         Calculates the sigmoid function of the neuron.
         :return: the actual output of the neuron for a given input.
         """
-        return 1 / (1 + npy.exp(-self.sum(inputs) - self.bias))
+        return 1 / (1 + npy.exp(-self.sum(inputs)))
+
 
 
 class Layer(object):
@@ -109,10 +110,10 @@ class Network(object):
             else:  # for every other layer
                 for j in range(len(current_layer.neurons)):
                     previous_layer = self.layers[i + 1]
-                    layer_error = 0.0
+                    neuron_error = 0.0
                     for n in previous_layer.neurons:
-                        layer_error += n.weights[j] * n.delta
-                    errors.append(error)
+                        neuron_error += n.weights[j] * n.delta
+                    errors.append(neuron_error)
             for k in range(len(current_layer.neurons)):  # updating the deltas in every neuron of the layer
                 n = current_layer.neurons[k]  # for every neuron in the layer
                 n.delta = errors[k] * (n.output * (1.0 - n.output))  # error * transfer_derivative(output)
@@ -157,7 +158,7 @@ class Network(object):
                     sum_error_sqr += (desired_output_set[i][j] - actual_output[j]) ** 2  # get mean sqr error
                     self.backward_propagation(desired_output_set[i])
                     self.updating_values(input, rate)
-                    i += 1
+                i += 1
             print(
                 '## epoch = %d, rate = %.3f, abs_error = %.3f, sqr_error = %.3f' % (e, rate, sum_error, sum_error_sqr))
 

@@ -1,4 +1,4 @@
-from Perceptron import Perceptron
+from Tarea1.Perceptron import Perceptron
 import random as rd
 
 

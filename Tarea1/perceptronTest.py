@@ -1,7 +1,5 @@
 import unittest
-from Perceptron import Perceptron, SumPerceptron
-from LearningPerceptron import LearningPerceptron
-from SigmoidNeuron import Sigmoid
+from Tarea1.Perceptron import Perceptron
 
 
 class MyTestCase(unittest.TestCase):
