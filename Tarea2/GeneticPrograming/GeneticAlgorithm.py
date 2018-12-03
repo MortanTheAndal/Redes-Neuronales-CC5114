@@ -25,7 +25,7 @@ class Individual(object):
 
 def generate_first_population(pop_size, individual_size, gene_pool):
     """
-
+    createst a population of individuals
     :param pop_size: that the population should have.
     :param individual_size: size of genes that each member of the population should have.
     :return: a list with individuals.
@@ -39,7 +39,7 @@ def generate_first_population(pop_size, individual_size, gene_pool):
 
 def get_fitness(guess, target):
     """
-
+    calculates fitness for a individual based on a comparison with a target
     :param guess: an individual from the population
     :param target: the secret word
     :return:number of characters that are different between guess and target
@@ -50,9 +50,10 @@ def get_fitness(guess, target):
 
 def fit_test(target, pop, fitness_func):
     """
+    calculates fitness for every individual of a population
     :param target: the secret word
     :param pop: the population
-    :param fitness_func: fitness function
+    :param fitness_func: fitness function, for it may depend on each example
     :return: the population whit the fitness calculated.
     """
     for individual in pop:
@@ -64,6 +65,7 @@ def select_fittest(pop, rev):
     """
     first sort by fitness, then discarding the weakest
     :param pop: population
+    :param rev: boolean, reverse order of the sort.
     :return: the fittest individuals for mating and mutating
     """
     pop = sorted(pop, key=lambda ind: ind.fitness, reverse=rev)
@@ -102,7 +104,7 @@ def crossover(pop, population, len_target, gene_pool):
 
 def mutate(pop, mutation_rate, target_len, gene_pool):
     """
-    mutates
+    randomly mutates genes
     :param pop:population
     :param mutation_rate: mutation factor
     :param target_len: the length of the target
@@ -116,27 +118,44 @@ def mutate(pop, mutation_rate, target_len, gene_pool):
     return pop
 
 
+def get_gen_avg(pop):
+    """
+    calculates the avg fitness 4 a population
+    :param pop: a population
+    :return: an average fitness float
+    """
+    sum = 0
+    for ind in pop:
+        sum += ind.fitness
+    return float(sum / len(pop))
+
+
 def genetic_algorithm(population, generations, gene_pool, target, len_target, mutation_rate):
+    """
+
+    :param population: size of population
+    :param generations: number of generations
+    :param gene_pool: set of genes
+    :param target: secret word
+    :param len_target: size of the secret word
+    :param mutation_rate: mutation threshold
+    :return: a tuple of the time taken, and the list
+    """
     pop = generate_first_population(population, len_target, gene_pool)
     start = time.monotonic()
+    gen_avg = []
     for gen in range(0, generations):
-            print("GENERATION: " + str(gen))
-            pop = fit_test(target, pop, get_fitness)
-            pop = select_fittest(pop, True)
-            pop = crossover(pop, population, len_target, gene_pool)
-            pop = mutate(pop, mutation_rate, len_target, gene_pool)
+        print("GENERATION: " + str(gen))
+        pop = fit_test(target, pop, get_fitness)
+        gen_avg.append(get_gen_avg(pop))
+        pop = select_fittest(pop, True)
+        pop = crossover(pop, population, len_target, gene_pool)
+        pop = mutate(pop, mutation_rate, len_target, gene_pool)
 
-            if any(ind.fitness >= len_target for ind in pop):
-                print("SOLUTION FOUND !!!!")
-                print("Total Time : " + str((time.monotonic() - start)) + "\t At Generation N°: " + str(gen))
-                break
-
-
-
-target_string = "Mortan The Andal"  ## '0100010101000101010010101010' ##
-target_string_len = len(target_string)
-no_individuals = 50
-no_generation = 1000
-pool = ' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'  ##'01'  ##
-mut_rate = 0.1
-#genetic_algorithm(no_individuals, no_generation, pool, target_string, target_string_len, mut_rate)
+        if any(ind.fitness >= len_target for ind in pop):
+            print("SOLUTION FOUND !!!!")
+            end = time.monotonic()
+            print("Total Time : " + str((end - start)) + "\t At Generation N°: " + str(gen))
+            return (end - start), gen_avg
+    end = time.monotonic()
+    return (end - start), gen_avg

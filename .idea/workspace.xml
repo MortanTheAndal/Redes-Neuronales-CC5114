@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41786d90-4431-4f16-bf56-239526628695" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Tarea1/NeuralNetworkTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/NeuralNetwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NeuralNetwork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearningPerceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/LearningPerceptron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/NeuralNetwork.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeuralNetworkTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perceptron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/Perceptron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SigmoidNeuron.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/SigmoidNeuron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perceptronTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea1/perceptronTest.py" afterDir="false" />
+    <list default="true" id="41786d90-4431-4f16-bf56-239526628695" name="Default" comment="directory changes and genetic algorithm implemented">
+      <change beforePath="$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +56,7 @@
     <session id="1937187664">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
@@ -74,25 +65,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="5" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="5" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="522" />
-          <entry key="dummy" value="9" />
-          <entry key="py" value="7225" />
+          <entry key="dummy" value="20" />
+          <entry key="py" value="8761" />
+          <entry key="txt" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="7747" />
+          <entry key="PLAIN_TEXT" value="77" />
+          <entry key="Python" value="9283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -110,13 +102,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+            <state relative-caret-position="181">
+              <caret line="158" column="41" selection-start-line="158" selection-start-column="41" selection-end-line="158" selection-end-column="41" />
               <folding>
                 <element signature="e#1#14#0" expanded="true" />
-                <marker date="1543776784413" expanded="true" signature="1624:1629" ph="..." />
-                <marker date="1543776784413" expanded="true" signature="2331:2519" ph="..." />
-                <marker date="1543776784413" expanded="true" signature="3099:3104" ph="..." />
+                <marker date="1543800964191" expanded="true" signature="1834:1839" ph="..." />
+                <marker date="1543800964191" expanded="true" signature="2593:2781" ph="..." />
+                <marker date="1543800964191" expanded="true" signature="3376:3381" ph="..." />
+                <marker date="1543800964191" expanded="true" signature="3780:3875" ph="..." />
               </folding>
             </state>
           </provider>
@@ -125,28 +118,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="73" column="11" lean-forward="true" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+            <state relative-caret-position="149">
+              <caret line="95" column="49" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
-                <marker date="1543791858176" expanded="true" signature="701:823" ph="..." />
-                <marker date="1543791858176" expanded="true" signature="898:2857" ph="..." />
-                <marker date="1543791858176" expanded="true" signature="2032:2127" ph="..." />
-                <marker date="1543791858176" expanded="true" signature="2164:2857" ph="..." />
+                <marker date="1543800964265" expanded="true" signature="691:813" ph="..." />
+                <marker date="1543800964265" expanded="true" signature="888:2982" ph="..." />
+                <marker date="1543800964265" expanded="true" signature="2061:2156" ph="..." />
+                <marker date="1543800964265" expanded="true" signature="2218:2982" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1152">
+              <caret line="93" column="49" selection-start-line="93" selection-start-column="49" selection-end-line="93" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$USER_HOME$/Downloads/pyplot_three.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithmTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="16">
               <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -168,6 +180,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>|</find>
+      <find>np</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,8 +209,8 @@
         <option value="$PROJECT_DIR$/Tarea2/GeneticAlgorithm/GeneticAlgorithmTest.py" />
         <option value="$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithmTest.py" />
         <option value="$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithm.py" />
-        <option value="$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py" />
         <option value="$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py" />
+        <option value="$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py" />
       </list>
     </option>
   </component>
@@ -258,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.NQueensGA">
+  <component name="RunManager" selected="Python.experimentation">
     <configuration name="GeneticAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NeuralNetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -301,34 +314,46 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for GeneticAlgorithmTest.MyTestCase.test_get_fitness" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="experimentation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NeuralNetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tarea2/GeneticPrograming" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;GeneticAlgorithmTest.MyTestCase.test_get_fitness&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for GeneticAlgorithmTest.MyTestCase.test_pop_creation_bin" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pyplot_three" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NeuralNetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tarea2/GeneticPrograming" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;GeneticAlgorithmTest.MyTestCase.test_pop_creation_bin&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/pyplot_three.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in GeneticAlgorithmTest.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -348,18 +373,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.pytest in GeneticAlgorithmTest.py" />
-      <item itemvalue="Python tests.pytest for GeneticAlgorithmTest.MyTestCase.test_pop_creation_bin" />
-      <item itemvalue="Python tests.pytest for GeneticAlgorithmTest.MyTestCase.test_get_fitness" />
       <item itemvalue="Python.GeneticAlgorithm" />
       <item itemvalue="Python.NQueensGA" />
+      <item itemvalue="Python.pyplot_three" />
+      <item itemvalue="Python.experimentation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.experimentation" />
+        <item itemvalue="Python.pyplot_three" />
         <item itemvalue="Python.NQueensGA" />
         <item itemvalue="Python.GeneticAlgorithm" />
         <item itemvalue="Python tests.pytest in GeneticAlgorithmTest.py" />
-        <item itemvalue="Python tests.pytest for GeneticAlgorithmTest.MyTestCase.test_get_fitness" />
-        <item itemvalue="Python tests.pytest for GeneticAlgorithmTest.MyTestCase.test_pop_creation_bin" />
       </list>
     </recent_temporary>
   </component>
@@ -374,6 +399,21 @@
       <option name="presentableId" value="Default" />
       <updated>1525746203678</updated>
     </task>
+    <task id="LOCAL-00001" summary="directory changes and genetic algorithm implemented">
+      <created>1543791918387</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543791918387</updated>
+    </task>
+    <task id="LOCAL-00002" summary="directory changes and genetic algorithm implemented">
+      <created>1543791967042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543791967042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -408,6 +448,15 @@
       <configuration name="pytest in GeneticAlgorithmTest.py" configurationId="tests" />
     </history-entry>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
@@ -417,13 +466,13 @@
       <window_info id="Favorites" order="2" sideWeight="0.50240386" side_tool="true" weight="0.26041666" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37419355" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37419355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5032258" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32903227" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5014881" side_tool="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49925596" weight="0.32419354" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -454,6 +503,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="directory changes and genetic algorithm implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="directory changes and genetic algorithm implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,42 +598,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithmTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/pyplot_three.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+        <state relative-caret-position="181">
+          <caret line="158" column="41" selection-start-line="158" selection-start-column="41" selection-end-line="158" selection-end-column="41" />
           <folding>
             <element signature="e#1#14#0" expanded="true" />
-            <marker date="1543776784413" expanded="true" signature="1624:1629" ph="..." />
-            <marker date="1543776784413" expanded="true" signature="2331:2519" ph="..." />
-            <marker date="1543776784413" expanded="true" signature="3099:3104" ph="..." />
+            <marker date="1543800964191" expanded="true" signature="1834:1839" ph="..." />
+            <marker date="1543800964191" expanded="true" signature="2593:2781" ph="..." />
+            <marker date="1543800964191" expanded="true" signature="3376:3381" ph="..." />
+            <marker date="1543800964191" expanded="true" signature="3780:3875" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="95" column="49" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1543800964265" expanded="true" signature="691:813" ph="..." />
+            <marker date="1543800964265" expanded="true" signature="888:2982" ph="..." />
+            <marker date="1543800964265" expanded="true" signature="2061:2156" ph="..." />
+            <marker date="1543800964265" expanded="true" signature="2218:2982" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/experimentation.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/NQueensGA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="73" column="11" lean-forward="true" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+        <state relative-caret-position="1152">
+          <caret line="93" column="49" selection-start-line="93" selection-start-column="49" selection-end-line="93" selection-end-column="49" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
-            <marker date="1543791858176" expanded="true" signature="701:823" ph="..." />
-            <marker date="1543791858176" expanded="true" signature="898:2857" ph="..." />
-            <marker date="1543791858176" expanded="true" signature="2032:2127" ph="..." />
-            <marker date="1543791858176" expanded="true" signature="2164:2857" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tarea2/GeneticPrograming/GeneticAlgorithmTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

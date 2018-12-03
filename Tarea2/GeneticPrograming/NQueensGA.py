@@ -1,4 +1,4 @@
-from GeneticAlgorithm import select_fittest, fit_test
+from GeneticAlgorithm import select_fittest
 import numpy as np
 import time
 import random
@@ -43,30 +43,30 @@ def n_queen_fitness_function(pop):
     return pop
 
 
-def crossover(pop, population):
+def crossover(pop, population, board_size):
     children = []
     for _ in range(0, int((population - len(pop)) / 2)):
         p1 = random.choice(pop)
         p2 = random.choice(pop)
 
-        c1 = Board(BOARD_SIZE)
-        c2 = Board(BOARD_SIZE)
+        c1 = Board(board_size)
+        c2 = Board(board_size)
 
-        split = random.randint(0, BOARD_SIZE - 1)
+        split = random.randint(0, board_size - 1)
 
-        c1.genes = p1.board[0:split].extend(p2.board[split:BOARD_SIZE])
-        c2.genes = p2.board[0:split].extend(p1.board[split:BOARD_SIZE])
+        c1.genes = p1.board[0:split].extend(p2.board[split:board_size])
+        c2.genes = p2.board[0:split].extend(p1.board[split:board_size])
         children.append(c1)
         children.append(c2)
     pop.extend(children)
     return pop
 
 
-def mutate(pop):
+def mutate(pop, board_size, mutation_rate):
     for ind in pop:
         for index, param in enumerate(ind.board):
             if random.uniform(0.0, 1.0) <= mutation_rate:
-                ind.board[index] = random.randint(0, BOARD_SIZE - 1)
+                ind.board[index] = random.randint(0, board_size - 1)
     return pop
 
 
@@ -77,8 +77,8 @@ def get_pop_avg(pop):
     return float(sum / len(pop))
 
 
-def NQ_ga(population, generations, ):
-    pop = generate_population(population, BOARD_SIZE)
+def NQ_ga(population, generations, board_size, mutation_rate):
+    pop = generate_population(population, board_size)
     start = time.monotonic()
     generation_avgs = []
     for gen in range(generations):
@@ -86,18 +86,14 @@ def NQ_ga(population, generations, ):
         pop = n_queen_fitness_function(pop)
         generation_avgs.append(get_pop_avg(pop))
         pop = select_fittest(pop, False)
-        pop = crossover(pop, population)
-        pop = mutate(pop)
+        pop = crossover(pop, population, board_size)
+        pop = mutate(pop, board_size, mutation_rate)
 
         if any(ind.fitness == 0 for ind in pop):
             print("SOLUTION FOUND !!!!")
-            print("Total Time : " + str((time.monotonic() - start)) + "\t At Generation N°: " + str(gen))
-            return generation_avgs
+            end = time.monotonic()
+            print("Total Time : " + str((end - start)) + "\t At Generation N°: " + str(gen))
+            return (end - start), generation_avgs
+    end = time.monotonic()
+    return (end - start), generation_avgs
 
-
-BOARD_SIZE = 8
-pop_size = 20
-no_generations = 10000
-mutation_rate = 0.2
-
-NQ_ga(pop_size, no_generations)
